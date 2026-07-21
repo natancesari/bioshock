@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOSHOCK Serum Anti-Edad - Oferta Exclusiva</title>
+    <!-- Google Fonts para un diseño limpio y profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de colores basadas en la marca Bioshock de tu imagen */
+        :root {
+            --primary-blue: #145a8d;
+            --light-blue: #e8f4fc;
+            --accent-blue: #0f4066;
+            --text-dark: #2c3e50;
+            --text-gray: #555555;
+            --discount-red: #e74c3c;
+            --success-green: #27ae60;
+            --bg-color: #fcfcfc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Barra de anuncios superior (Compliance y Trust) */
+        .top-bar {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Encabezado */
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-section h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .header-section p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Sección de Compra (Fondo de embudo) */
+        .checkout-section {
+            display: flex;
+            flex-wrap: wrap;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+        }
+
+        /* Área de la imagen (Espacio reservado) */
+        .image-area {
+            flex: 1 1 400px;
+            background-color: var(--light-blue);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        /* ESTE ES EL CONTENEDOR DONDE PONDRÁS TU IMAGEN */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            border: 3px dashed #9cbdd4;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #6a8ba3;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            padding: 20px;
+            background: rgba(255,255,255,0.5);
+        }
+
+        /* Si agregas la etiqueta img dentro de .image-placeholder, asegúrate de que tenga: width: 100%; height: auto; object-fit: contain; */
+
+        /* Área de contenido y precio */
+        .content-area {
+            flex: 1 1 500px;
+            padding: 40px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-area h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        /* Resumen de beneficios para no dejar la página "seca" */
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+        .benefits-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Bloque de Precio */
+        .price-box {
+            background-color: #fff9f9;
+            border: 2px solid #ffeded;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .discount-badge {
+            background-color: var(--discount-red);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .new-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Botón de Compra */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(20, 90, 141, 0.4);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 90, 141, 0.6);
+        }
+
+        .secure-checkout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* Footer / Compliance (Obligatorio para Google Ads) */
+        .footer {
+            margin-top: 60px;
+            padding: 30px 20px;
+            background-color: #1a1a1a;
+            color: #888;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .footer a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-size: 0.75rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+            .content-area {
+                padding: 30px 20px;
+            }
+            .new-price {
+                font-size: 2.5rem;
+            }
+            .cta-button {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de confianza - Importante para la experiencia del usuario -->
+    <div class="top-bar">
+        🔒 Compra 100% Segura | Envío a todo el país | Satisfacción Garantizada
+    </div>
+
+    <div class="container">
+        
+        <!-- Encabezado de la página -->
+        <header class="header-section">
+            <h1>Estás a un paso de renovar tu piel</h1>
+            <p>Completá tu pedido de BIOSHOCK Serum Anti-Edad hoy mismo y aprovechá nuestra oferta exclusiva antes de que se agote el stock.</p>
+        </header>
+
+        <!-- Sección Principal: Imagen + Información + Precio -->
+        <main class="checkout-section">
+            
+            <!-- LADO IZQUIERDO: ÁREA DE IMAGEN -->
+            <div class="image-area">
+                <!-- ACÁ ADENTRO PONÉS TU IMAGEN EN VISUAL STUDIO -->
+                <div class="image-placeholder">
+                  <!-- LADO IZQUIERDO: ÁREA DE IMAGEN -->
+            <div class="image-area">
+                <img src="bioshock produto.jpg" alt="Bioshock Serum Anti Edad" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+                </div>
+            </div>
+
+            <!-- LADO DERECHO: CONTENIDO Y COMPRA -->
+            <div class="content-area">
+                <h2>¿Qué te llevás hoy?</h2>
+                
+                <!-- Breve resumen para que no sea una página vacía -->
+                <ul class="benefits-list">
+                    <li><strong>Nuevo BIOSHOCK Serum Anti-Edad</strong> (Tratamiento completo).</li>
+                    <li>Fórmula avanzada con <strong>Ácido Hialurónico y Niacinamida</strong>.</li>
+                    <li>Incluye complejo <strong>Matrixyl 3000</strong> para una piel más firme.</li>
+                    <li>Textura ligera, de rápida absorción y para todo tipo de piel.</li>
+                </ul>
+
+                <!-- Destacado del Precio -->
+                <div class="price-box">
+                    <span class="discount-badge">¡Oferta Especial Aplicada!</span>
+                    <!-- Precio actualizado como pedido -->
+                    <span class="old-price">Precio Regular: $69.800</span>
+                    <div class="new-price">
+                        <span class="currency">$</span>34.900
+                    </div>
+                </div>
+
+                <!-- Botón de Acción (Call to Action) -->
+                <!-- El texto deja claro que el cliente está haciendo el pedido -->
+                <a href="https://vp3s5.doctorzakaria.com/l" class="cta-button">
+                    ¡Sí, quiero pedir mi Bioshock ahora!
+                </a>
+
+                <!-- Sellos de confianza de texto -->
+                <div class="secure-checkout">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Tus datos están protegidos y encriptados.
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer obligatorio para cumplimiento de políticas de Google Ads -->
+    <footer class="footer">
+        <div>
+            <!-- Estos links deben apuntar a páginas reales de tu sitio web para que Google Ads no rechace la campaña -->
+            <a href="#">Términos y Condiciones</a> | 
+            <a href="#">Políticas de Privacidad</a> | 
+            <a href="#">Políticas de Reembolso</a> | 
+            <a href="#">Contacto</a>
+        </div>
+        <p class="disclaimer">
+            <strong>Aviso Legal (Disclaimer):</strong> Este producto es de uso cosmético externo. Los resultados pueden variar de persona a persona dependiendo del tipo de piel, constancia en el uso y factores genéticos. Este producto no está destinado a diagnosticar, tratar, curar o prevenir ninguna enfermedad. La información contenida en esta página no reemplaza el consejo médico profesional.
+        </p>
+        <p style="margin-top: 15px;">&copy; 2024 BIOSHOCK. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
